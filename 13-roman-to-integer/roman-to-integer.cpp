@@ -11,10 +11,10 @@ public:
         value['D'] = 500;
         value['M'] = 1000;
 
-        int ans = value[s[s.length() - 1]];
+        int ans = 0;
 
-        for(int i = 0; i < s.length() - 1; i++) {
-            if(value[s[i]] < value[s[i + 1]]) {
+        for(int i = 0; i < s.length(); i++) {
+            if(i + 1 < s.length() && value[s[i]] < value[s[i + 1]]) {
                 ans -= value[s[i]];
             }
             else {
