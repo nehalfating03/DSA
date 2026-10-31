@@ -4,13 +4,14 @@ public:
         int n = nums.size();
         int count = 0;
         int longest = 0;
-        for(int i = 0;i<n;i++){
+
+        for(int i = 0; i<n ; i++){
             if(nums[i]==1){
                 count++;
-                longest= max(count,longest);
+                longest = max(count , longest);
             }
             else{
-                count=0;
+                count = 0;
             }
         }
         return longest;
